@@ -21,7 +21,7 @@ const app: Koa = new Koa();
 // 错误处理
 onError(app);
 
-// 配置参数
+// redis 配置参数
 const redisConfig = {
     port: config.redis.PORT,
     host: config.redis.HOST,
@@ -29,7 +29,7 @@ const redisConfig = {
     ttl: 1000 * 60 * 60,               // 失效时间
 };
 
-// 配置session 中间件
+// 配置session 中间件 , 如果没有使用redis, 注释掉即可
 app.keys = ['keys', 'keyskeys'];            // redis cookies 签名，必须要
 app.use(session({
     store: redisStore(redisConfig)

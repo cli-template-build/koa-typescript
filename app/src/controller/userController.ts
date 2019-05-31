@@ -15,13 +15,15 @@ class UserController {
             name: 'yanle',
             age: 30
         };
-        session.setSession = test;
         return ctx.body = test;
     }
 
     static getSession(ctx) {
         let session: Session = ctx.session;
-        return ctx.body = session.setSession;
+        return ctx.body = {
+            name: 'yanle',
+            age: 30
+        };
     }
 }
 

@@ -20,7 +20,8 @@ coverage/
 .env.production.local
 .idea
 
-app/*.js
+app/**/*.js
+app/logs/
 
 
 npm-debug.log*
