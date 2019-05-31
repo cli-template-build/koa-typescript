@@ -20,6 +20,8 @@ coverage/
 .env.production.local
 .idea
 
+app/*.js
+
 
 npm-debug.log*
 yarn-debug.log*
