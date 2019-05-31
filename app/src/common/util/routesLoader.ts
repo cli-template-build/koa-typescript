@@ -5,8 +5,7 @@ export default function (dirname) {
         const routers = [];
         glob(
             `${dirname}/*`,
-            {ignore: '**/index.js'},
-            {ignore: '**/*.map'},
+            {ignore: ['**/index.js', '**/*.map', '**/*ts', '**/routing.js']},
             (err, files) => {
                 if (err) {
                     reject(err)
